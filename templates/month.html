@@ -27,17 +27,16 @@
 				{% for day, entries, current in week %}
 				<td class="col-md-1" style="height:100px;">
 					<!-- Day number and entry snippets -->
+					{% if day != 0 %}
 					<div style="height:20px;">
-						{% if day != 0 %}
 						<a href="{% url 'day' year month day %}">{{ day }}</a>
 					</div>
 					<div style="height:80px;">
 						{% for entry in entries %}
-						<br />
-						<p>{{ entry.title|safe }}</p>
-						{% endfor %}
-						{% endif %}
+						<p>{{forloop.counter}}. {{ entry.title|safe }}</p>
+						{% endfor %}	
 					</div>
+					{% endif %}
 				</td>
 				{% endfor %}
 			</tr>

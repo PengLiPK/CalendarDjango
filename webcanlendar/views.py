@@ -94,6 +94,9 @@ def day(request, year, month, day):
         return render(request, "day.html", {"year":year, "month":month, "day":day,"formset": formset})
 
 def delete_entry(request, year, month, day, entry_id):
-    Entry.objects.get(id=entry_id).delete()
+    try:
+        Entry.objects.get(id=entry_id).delete()
+    except:
+    	pass
     formset = Entry.objects.filter(date__year=year, date__month=month, date__day=day)
     return render(request, "day.html", {"year":year, "month":month, "day":day,"formset": formset})
