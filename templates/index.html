@@ -1,0 +1,28 @@
+{%extends "base.html" %}
+{%block title %}Welcome{% endblock %}
+{%block content %}
+<a href="{% url 'home' year|add:'-3' %}">&lt;&lt; Prev</a>
+<a href="{% url 'home' year|add:'3' %}">Next &gt;&gt;</a>
+
+{% for year, months in years %}
+<div class="row">
+	<div class="container">
+		<div class="col-md-12">
+			<h4 class="text-center">{{ year }}</h4>
+		</div>
+		{% for month in months %}
+		<div class="col-md-2" style="border: 3px solid white; background-color: #B3B2B2;">
+			{% if month.entry %}<b>{% endif %}
+			<a href="{% url 'month1' year month.n %}"
+				<h4 class="text-center">{{ month.name }}</h4>
+			</a>
+			{% if month.entry %}</b>{% endif %}
+		</div>
+
+			{% if month.n == 6 %}<br />{% endif %}
+		{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+{% endblock %}

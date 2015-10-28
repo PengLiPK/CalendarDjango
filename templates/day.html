@@ -1,0 +1,26 @@
+{%extends "base.html" %}
+{%block title %}Welcome{% endblock %}
+{%block content %}
+
+{% for entry in formset %}
+<p>{{forloop.counter}}. {{ entry.title }} &nbsp;|&nbsp;<a href="{% url 'delete_entry' year month day entry.id %}">Delete</a></p>
+{% empty %}
+{% endfor %}
+
+<h4>New Entry</h4>
+<form action="{% url 'day' year month day %}" method="POST">
+
+    <div>
+    <label>Title</label><br>
+    <textarea name="title" required></textarea><br>
+    <label>Snippet</label><br>
+    <textarea name="snippet" required></textarea><br>
+    <input type="checkbox" name="remind" value="True">Remind<br>
+    <label>Description</label><br>
+    <textarea name="body" required cols="60" rows="10"></textarea><br>
+    {% csrf_token %}
+    <input type="submit" value="Save" />
+    </div>
+</form>
+
+{% endblock %}

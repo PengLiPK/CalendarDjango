@@ -1,0 +1,48 @@
+{%extends "base.html" %}
+{%block title %}Welcome{% endblock %}
+{%block content %}
+
+<a href= "{% url 'month2' year month "prev" %}">&lt;&lt; Prev</a>
+<a href= "{% url 'month2' year month "next" %}">Next &gt;&gt;</a>
+
+<div class="col-md-7 col-md-offset-2">
+	<div>
+		<h3 class="text-center">{{ mname }} {{ year }}</h4>
+	</div>
+
+	<div>
+		<table>
+			<tr>
+				<td class="col-md-1">Mon</td>
+				<td class="col-md-1">Tue</td>
+				<td class="col-md-1">Wed</td>
+				<td class="col-md-1">Thu</td>
+				<td class="col-md-1">Fri</td>
+				<td class="col-md-1">Sat</td>
+				<td class="col-md-1">Sun</td>
+			</tr>
+
+			{% for week in month_days %}
+			<tr>
+				{% for day, entries, current in week %}
+				<td class="col-md-1" style="height:100px;">
+					<!-- Day number and entry snippets -->
+					<div style="height:20px;">
+						{% if day != 0 %}
+						<a href="{% url 'day' year month day %}">{{ day }}</a>
+					</div>
+					<div style="height:80px;">
+						{% for entry in entries %}
+						<br />
+						<p>{{ entry.title|safe }}</p>
+						{% endfor %}
+						{% endif %}
+					</div>
+				</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}

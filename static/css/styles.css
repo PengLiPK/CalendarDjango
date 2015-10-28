@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+body {
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login-form {
+	margin: 100px auto;
+	max-width: 400px;
+}
+
+form[role=login] {
+	font: 16px/1.6em Lato, serif;
+	background: #fff;
+	padding: 10px 0 0 0;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+	form[role=login] h2 {
+		font-size: 26px;
+		color: #5d5c5c;
+		margin-bottom: 1em;
+	}
+	form[role=login] input,
+	form[role=login] button,
+	form[role=login] a.btn {
+		font-size: 16px;
+	}
+	form[role=login] > div {
+		line-height: 3em;
+		margin: 1.5em 0 0 0;
+		padding: 0 26px;
+		background: #f2f2f2;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		-webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-bottomleft: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-radius-bottomright: 10px;
+	}
+	form[role=login] > section {
+		padding: 0 26px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		background: #fff;
+	}
