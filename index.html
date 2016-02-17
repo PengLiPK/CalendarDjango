@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>A Web Calendar by PengLiPK</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/PengLiPK/CalendarDjango">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>A Web Calendar</h1>
+            <h2>A web calendar implemented by Django</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/PengLiPK/CalendarDjango/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/PengLiPK/CalendarDjango/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h3>
+<a id="a-web-calendar" class="anchor" href="#a-web-calendar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A web calendar</h3>
+
+<p>This is a web calendar implemented by <a href="https://www.djangoproject.com/">Django</a>. Django is a full-stack Python Wed framework. "full-stack" means that it combines front-end and back-end together and allows web application more modular.</p>
+
+<h4>
+<a id="run-web-calendar-on-local-machine" class="anchor" href="#run-web-calendar-on-local-machine" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run web calendar on local machine</h4>
+
+<p>Download the web calendar and enter the <code>CalendarDjango</code> folder. Make sure you have installed Python and Django. Then type command:</p>
+
+<pre><code>python manage.py runserver
+</code></pre>
+
+<p>Well done! The server is running now. You can type <code>127.0.0.1:8000</code> on you web browser (Chrome, Firfox or others).</p>
+
+<ul>
+<li><p>A web calender will be like this:<br>
+<img src="./images/web_c.png" alt="web_c"></p></li>
+<li><p>Click on one month, you will enter the month:<br>
+<img src="./images/month.png" alt="month"></p></li>
+<li><p>Click on one day, you can write a reminder:<br>
+<img src="./images/reminder.png" alt="reminder"></p></li>
+<li><p>Click on save button, a reminder will appear on that day:<br>
+<img src="./images/month_r.png" alt="month_r"></p></li>
+<li><p>After you saved a reminder, it would be stored in SQL database in the <code>CalendarDjango</code> folder. So when you stop and restart the surver, the entry willstill be there unless you delete it from the database.</p></li>
+</ul>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/PengLiPK">PengLiPK</a> can be found on <a href="https://github.com/PengLiPK/CalendarDjango">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-73791386-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
